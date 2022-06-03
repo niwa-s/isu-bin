@@ -25,3 +25,4 @@ sudo cp "${SCRIPT_DIR}/nginx_log_format.conf" /etc/nginx/sites-enabled/.
 
 # mysql.cnfの末尾に、slow-queryの設定を追加
 sudo sh -c "cat ${SCRIPT_DIR}/.my.cnf >> /etc/mysql/mysql.conf.d/mysqld.cnf"
+echo "/etc/nginx/nginx.confのaccess_logの行を消してください！！"
