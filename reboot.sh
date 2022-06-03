@@ -23,5 +23,6 @@ make
 sudo systemctl restart isu-go
 
 rm -rf /home/isucon/private_isu/webapp/public/image
+mkdir /home/isucon/private_isu/webapp/public/image
 
 
