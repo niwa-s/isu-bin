@@ -1,5 +1,9 @@
-# pt-query-digestのインストール
 sudo apt update
+
+# unzipのインストール
+sudo apt install unzip
+
+# pt-query-digestのインストール
 sudo apt install percona-toolkit
 
 # alpのインストール
