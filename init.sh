@@ -1,5 +1,9 @@
 sudo apt update
 
+# dirname $0 でスクリプトの存在するディレクトリが得られる
+# インラインコマンドで cd して pwd すれば絶対パスが得られる
+SCRIPT_DIR=$(cd $(dirname $0) && pwd)
+
 # unzipのインストール
 sudo apt install unzip
 
@@ -14,4 +18,4 @@ rm alp_linux_amd64.zip
 rm alp
 
 # nginx.confにログフォーマットを追加
-sudo cp nginx_log_format.conf /etc/nginx/sites-enabled/.
+sudo cp "${SCRIPT_DIR}/nginx_log_format.conf" /etc/nginx/sites-enabled/.
