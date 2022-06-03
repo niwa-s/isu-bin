@@ -22,3 +22,6 @@ rm alp
 
 # nginx.confにログフォーマットを追加
 sudo cp "${SCRIPT_DIR}/nginx_log_format.conf" /etc/nginx/sites-enabled/.
+
+# $HOME/.my.cnfにログフォーマットを追加
+sudo cp "${SCRIPT_DIR}/.my.cnf" "${HOME}/."
