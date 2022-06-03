@@ -1,0 +1,12 @@
+#https://qiita.com/piroor/items/7c9380e408d07fd83bfc
+# tmuxでもコマンド履歴を共有できる
+function share_history {
+  history -a
+  tac ~/.bash_history | awk '!a[$0]++' | tac > ~/.bash_history.tmp
+  [ -f ~/.bash_history.tmp ] &&
+    mv ~/.bash_history{.tmp,} &&
+    history -c &&
+    history -r
+}
+PROMPT_COMMAND='share_history'
+shopt -u histappend

@@ -13,3 +13,7 @@ sudo mysqladmin flush-logs
 
 # mysqlを再起動
 sudo systemctl restart mysql
+
+rm -rf /home/isucon/private_isu/webapp/public/image
+
+echo "/etc/nginx/nginx.confのaccess_logの行を消してください！！"
