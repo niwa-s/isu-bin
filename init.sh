@@ -1,8 +1,11 @@
 sudo apt update
 
+
 # dirname $0 でスクリプトの存在するディレクトリが得られる
 # インラインコマンドで cd して pwd すれば絶対パスが得られる
 SCRIPT_DIR=$(cd $(dirname $0) && pwd)
+
+export PATH=$PATH:$SCRIPT_DIR
 
 # unzipのインストール
 sudo apt install unzip
